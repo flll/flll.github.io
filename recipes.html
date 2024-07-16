@@ -17,17 +17,17 @@
         }
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-            gap: 40px;
-            padding: 80px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px;
             box-sizing: border-box;
         }
         .recipe {
             border: none;
-            padding: 60px;
+            padding: 20px;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 16px;
+            border-radius: 8px;
             box-sizing: border-box;
             transition: transform 0.2s, box-shadow 0.2s;
             opacity: 0;
@@ -36,21 +36,21 @@
         }
         .recipe:hover {
             transform: translateY(-10px);
-            box-shadow: 0 80px 160px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
         }
         .recipe h2 {
-            margin: 0 0 40px;
+            margin: 0 0 20px;
             padding: 0;
-            font-size: 4em;
+            font-size: 1.5em;
             color: #333;
             border-bottom: 2px solid #ddd;
-            padding-bottom: 20px;
+            padding-bottom: 10px;
             font-weight: 700;
         }
         .recipe h3 {
-            margin: 40px 0 20px;
+            margin: 20px 0 10px;
             padding: 0;
-            font-size: 3em;
+            font-size: 1.2em;
             color: #555;
             font-weight: 700;
         }
@@ -60,8 +60,8 @@
             margin: 0;
         }
         .recipe ul li {
-            margin-bottom: 20px;
-            font-size: 2.4em;
+            margin-bottom: 10px;
+            font-size: 1em;
             color: #666;
             font-weight: 400;
         }
@@ -84,13 +84,13 @@
                 height: auto;
             }
             .recipe h2 {
-                font-size: 3em;
+                font-size: 1.2em;
             }
             .recipe h3 {
-                font-size: 2.4em;
+                font-size: 1em;
             }
             .recipe ul li {
-                font-size: 2em;
+                font-size: 0.8em;
             }
         }
         @keyframes fadeIn {
