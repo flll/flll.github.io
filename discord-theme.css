@@ -1,0 +1,115 @@
+/**
+ * @name ClearVision
+ * @author ClearVision Team
+ * @version 6.9.0
+ * @description BetterDiscordのための高度にカスタマイズ可能なテーマ。
+ * @source https://github.com/ClearVision/ClearVision-v6
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+
+/* オリジナルテーマを作成したZerthoxに感謝。 */
+
+/* CSSのインポート */
+@import url(https://clearvision.github.io/ClearVision-v6/main.css);
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500&display=swap');
+/* 設定 */
+:root {
+  /* アクセントカラー */
+  --main-color: #969696; /* メインアクセントカラー (hex, rgbまたはhsl) [デフォルト: #2780e6] */
+  --hover-color: #6a6a6a; /* ホバーアクセントカラー (hex, rgbまたはhsl) [デフォルト: #1e63b3] */
+  --success-color: #43b581; /* 成功アクセントカラー (hex, rgbまたはhsl) [デフォルト: #43b581] */
+  --danger-color: #982929; /* 危険アクセントカラー (hex, rgbまたはhsl) [デフォルト: #982929] */
+  --url-color: #0083fe; /* URLリンクの色 [デフォルト: var(--main-color)] */
+
+  /* ステータスカラー */
+  --online-color: #43b581; /* オンラインステータスカラー (hex, rgbまたはhsl) [デフォルト: #43b581] */
+  --idle-color: #faa61a; /* アイドルステータスカラー (hex, rgbまたはhsl) [デフォルト: #faa61a] */
+  --dnd-color: #982929; /* DNDステータスカラー (hex, rgbまたはhsl) [デフォルト: #982929] */
+  --streaming-color: #593695; /* ストリーミングステータスカラー (hex, rgbまたはhsl) [デフォルト: #593695] */
+  --offline-color: #d4d4d4; /* オフライン/インビジブルステータスカラー (hex, rgbまたはhsl) [デフォルト: #808080] */
+
+  /* 一般 */
+  --main-font: "Zen Maru Gothic", gg sans, Helvetica Neue, Helvetica, Arial, sans-serif; /* アプリのメインフォント (フォントはインストールされている必要があります) [デフォルト: gg sans, Helvetica Neue, Helvetica, Arial, sans-serif] */
+  --code-font: Consolas, Liberation Mono, Menlo, Courier, monospace; /* コードブロックのフォント (フォントはインストールされている必要があります) [デフォルト: Consolas, Liberation Mono, Menlo, Courier, monospace] */
+  --text-normal: #fff; /* デフォルトのDiscordテキストの色 */
+  --text-muted: #525252; /* デフォルトのDiscordミュートテキストの色 (例: 入力フィールドに入力する前のテキスト) */
+  --channels-width: 220px; /* チャンネルリストの幅 (Discordのデフォルトは240px) [デフォルト: 220px] */
+  --members-width: 240px; /* メンバーリストの幅 [デフォルト: 240px] */
+
+  /* アプリの背景 */
+  --background-shading: 100%; /* アプリの背景のシェーディング (完全に滑らかにするには0) [デフォルト: 100%] */
+  --background-overlay: rgba(0, 0, 0, 0.6); /* アプリの背景オーバーレイの色/グラデーション [デフォルト: rgba(0, 0, 0, 0.6)] */
+  --background-image: url(https://via.placeholder.com/1x1/000000); /* アプリの背景画像 (リンクはHTTPSである必要があります) [デフォルト: url(https://clearvision.github.io/images/sapphire.jpg)] */
+  --background-position: center; /* アプリの背景の位置 [デフォルト: center] */
+  --background-size: cover; /* アプリの背景のサイズ [デフォルト: cover] */
+  --background-repeat: no-repeat; /* アプリの背景の繰り返し [デフォルト: no-repeat] */
+  --background-attachment: fixed; /* アプリの背景の添付 [デフォルト: fixed] */
+  --background-brightness: 100%; /* アプリの背景の明るさ (< 100%で暗く、> 100%で明るく) [デフォルト: 100%] */
+  --background-contrast: 100%; /* アプリの背景のコントラスト [デフォルト: 100%] */
+  --background-saturation: 100%; /* アプリの背景の彩度 [デフォルト: 100%] */
+  --background-invert: 0%; /* アプリの背景の反転 (0 - 100%) [デフォルト: 0%] */
+  --background-grayscale: 0%; /* アプリの背景のグレースケール (0 - 100%) [デフォルト: 0%] */
+  --background-sepia: 0%; /* アプリの背景のセピア (0 - 100%) [デフォルト: 0%] */
+  --background-blur: 0px; /* アプリの背景のぼかし [デフォルト: 0px] */
+
+  /* ホームボタンアイコン */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg); /* ホームボタンアイコン (リンクはHTTPSである必要があります) [デフォルト: url(https://clearvision.github.io/icons/discord.svg)] */
+  --home-position: center; /* ホームボタンアイコンの位置 [デフォルト: center] */
+  --home-size: 40px; /* ホームボタンアイコンのサイズ [デフォルト: 40px] */
+
+  /* チャンネルカラー */
+  --channel-unread: #ffd147; /* 未読サーバーチャンネルの色 [デフォルト: var(--main-color)] これがメインカラーを上書きします */
+  --channel-color: #fff; /* 読み取り済みサーバーチャンネルの色 [デフォルト: rgba(255,255,255,0.3);] */
+  --channel-text-selected: #000; /* 選択されたチャンネルテキストの色、CVのデフォルトは#fff */
+  --muted-color: #ffffff1a; /* ミュートされたチャンネルの色 [デフォルト: rgba(255,255,255,0.1);] */
+
+  /* モーダルバックドロップ */
+  --backdrop-overlay: #000000cc; /* モーダルバックドロップオーバーレイの色/グラデーション [デフォルト: rgba(0, 0, 0, 0.8)] */
+  --backdrop-image: var(--background-image); /* モーダルバックドロップ画像 (リンクはHTTPSである必要があります) [デフォルト: var(--background-image)] */
+  --backdrop-position: var(--background-position); /* モーダルバックドロップの位置 [デフォルト: var(--background-position)] */
+  --backdrop-size: var(--background-size); /* モーダルバックドロップのサイズ [デフォルト: var(--background-size)] */
+  --backdrop-repeat: var(--background-repeat); /* モーダルバックドロップの繰り返し [デフォルト: var(--background-repeat)] */
+  --backdrop-attachment: var(--background-attachment); /* モーダルバックドロップの添付 [デフォルト: var(--background-attachment)] */
+  --backdrop-brightness: var(--background-brightness); /* モーダルバックドロップの明るさ (< 100%で暗く、> 100%で明るく) [デフォルト: var(--background-brightness)] */
+  --backdrop-contrast: var(--background-contrast); /* モーダルバックドロップのコントラスト [デフォルト: var(--background-contrast)] */
+  --backdrop-saturation: var(--background-saturation); /* モーダルバックドロップの彩度 [デフォルト: var(--background-saturation)] */
+  --backdrop-invert: var(--background-invert); /* モーダルバックドロップの反転 (0 - 100%) [デフォルト: var(--background-invert)] */
+  --backdrop-grayscale: var(--background-grayscale); /* モーダルバックドロップのグレースケール (0 - 100%) [デフォルト: var(--background-grayscale)] */
+  --backdrop-sepia: var(--background-sepia); /* モーダルバックドロップのセピア (0 - 100%) [デフォルト: var(--background-sepia)] */
+  --backdrop-blur: var(--background-blur); /* モーダルバックドロップのぼかし [デフォルト: var(--background-blur)] */
+
+  /* ユーザーポップアウト背景 */
+  --user-popout-image: var(--background-image); /* アプリの背景画像 (リンクはHTTPSである必要があります) [デフォルト: var(--background-image)] */
+  --user-popout-position: var(--background-position); /* ユーザーポップアウト背景の位置 [デフォルト: var(--background-position)] */
+  --user-popout-size: var(--background-size); /* ユーザーポップアウト背景のサイズ [デフォルト: var(--background-size)] */
+  --user-popout-repeat: var(--background-repeat); /* ユーザーポップアウト背景の繰り返し [デフォルト: var(--background-repeat)] */
+  --user-popout-attachment: var(--background-attachment); /* ユーザーポップアウト背景の添付 [デフォルト: var(--background-attachment)] */
+  --user-popout-brightness: var(--background-brightness); /* ユーザーポップアウト背景の明るさ (< 100%で暗く、> 100%で明るく) [デフォルト: var(--background-brightness)] */
+  --user-popout-contrast: var(--background-contrast); /* ユーザーポップアウト背景のコントラスト [デフォルト: var(--background-contrast)] */
+  --user-popout-saturation: var(--background-saturation); /* ユーザーポップアウト背景の彩度 [デフォルト: var(--background-saturation)] */
+  --user-popout-invert: var(--background-invert); /* ユーザーポップアウト背景の反転 (0 - 100%) [デフォルト: var(--background-invert)] */
+  --user-popout-grayscale: var(--background-grayscale); /* ユーザーポップアウト背景のグレースケール (0 - 100%) [デフォルト: var(--background-grayscale)] */
+  --user-popout-sepia: var(--background-sepia); /* ユーザーポップアウト背景のセピア (0 - 100%) [デフォルト: var(--background-sepia)] */
+  --user-popout-blur: calc(var(--background-blur) + 3px); /* ユーザーポップアウト背景のぼかし [デフォルト: calc(var(--background-blur) + 3px)] */
+  --user-popout-overlay: rgba(0, 0, 0, 0.6); /* ユーザーポップアウトオーバーレイの色 [デフォルト: rgba(0, 0, 0, .6)] */
+
+  /* ユーザーモーダル背景 */
+  --user-modal-image: var(--background-image); /* アプリの背景画像 (リンクはHTTPSである必要があります) [デフォルト: var(--background-image)] */
+  --user-modal-position: var(--background-position); /* ユーザーモーダル背景の位置 [デフォルト: var(--background-position)] */
+  --user-modal-size: var(--background-size); /* ユーザーモーダル背景のサイズ [デフォルト: var(--background-size)] */
+  --user-modal-repeat: var(--background-repeat); /* ユーザーモーダル背景の繰り返し [デフォルト: var(--background-repeat)] */
+  --user-modal-attachment: var(--background-attachment); /* ユーザーモーダル背景の添付 [デフォルト: var(--background-attachment)] */
+  --user-modal-brightness: var(--background-brightness); /* ユーザーモーダル背景の明るさ (< 100%で暗く、> 100%で明るく) [デフォルト: var(--background-brightness)] */
+  --user-modal-contrast: var(--background-contrast); /* ユーザーモーダル背景のコントラスト [デフォルト: var(--background-contrast)] */
+  --user-modal-saturation: var(--background-saturation); /* ユーザーモーダル背景の彩度 [デフォルト: var(--background-saturation)] */
+  --user-modal-invert: var(--background-invert); /* ユーザーモーダル背景の反転 (0 - 100%) [デフォルト: var(--background-invert)] */
+  --user-modal-grayscale: var(--background-grayscale); /* ユーザーモーダル背景のグレースケール (0 - 100%) [デフォルト: var(--background-grayscale)] */
+  --user-modal-sepia: var(--background-sepia); /* ユーザーモーダル背景のセピア (0 - 100%) [デフォルト: var(--background-sepia)] */
+  --user-modal-blur: calc(var(--background-blur) + 3px); /* ユーザーモーダル背景のぼかし [デフォルト: calc(var(--background-blur) + 3px)] */
+
+  /* テーマBDカラー */
+  --bd-blue: var(--main-color); /* BetterDiscordのメインカラー [デフォルト: var(--main-color)] */
+  --bd-blue-hover: var(--hover-color); /* BetterDiscordのホバーカラー [デフォルト: var(--hover-color)] */
+  --bd-blue-active: var(--hover-color); /* BetterDiscordのアクティブカラー [デフォルト: var(--hover-color)] */
+}
