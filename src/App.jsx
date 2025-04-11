@@ -43,8 +43,8 @@ function App() {
   const cardData = [
     {
       imageSrc: "https://i.scdn.co/image/ab67616d0000b273e36376a9c9d5b63ab8893476",
-      altText: "Liam Gallagher - C’MON YOU KNOW",
-      captionText: "Liam Gallagher - C’MON YOU KNOW",
+      altText: "Liam Gallagher - C'MON YOU KNOW",
+      captionText: "Liam Gallagher - C'MON YOU KNOW",
       linkUrl: "https://open.spotify.com/album/7IpAa9HvutfL3LsDsgluqY"
     },
     {
@@ -85,7 +85,7 @@ function App() {
             mouseInteraction={!isMobile}
             spinRotation={0.1}
             spinSpeed={0.1}
-            pixelFilter={2000}
+            pixelFilter={isMobile ? 500 : 2000}
           />
         </div>
 
@@ -96,7 +96,8 @@ function App() {
           width: '100%', 
           height: '100%', 
           zIndex: 2, 
-          pointerEvents: 'none'
+          pointerEvents: 'none',
+          display: isMobile ? 'none' : 'block'
         }}>
           <Dither
             waveColor={[0.3, 0.3, 0.3]}
