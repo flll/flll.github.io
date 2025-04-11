@@ -16,7 +16,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm --loglevel silly ci
+        run: npm --loglevel silly ci --force
         
       - name: Build
         run: npm run build
