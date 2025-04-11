@@ -28,4 +28,5 @@ export default defineConfig({
   optimizeDeps: {
     include: ['three', '@react-three/fiber', '@react-three/postprocessing'],
   },
+  base: '/',
 }); 
